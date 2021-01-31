@@ -8,6 +8,11 @@ from: https://www.freecodecamp.org/news/how-to-set-up-a-vpn-server-at-home/
 
 apt-get install -y wireguard
 
+
+try this: https://www.stavros.io/posts/how-to-configure-wireguard/
+
+
+
 cd ~
 mkdir .wireguard
 cd .wireguard
@@ -30,6 +35,17 @@ PublicKey = NwsVexamples4sBURwFl6HVchellou6o63r2B0s=
 AllowedIPs = 10.0.0.2/32
 ```
 
+sample 2: 
+```
+[Interface]
+Address = 192.168.2.1
+PrivateKey = <server's privatekey>
+ListenPort = 51820
+
+[Peer]
+PublicKey = <client's publickey>
+AllowedIPs = 192.168.2.2/32
+```
 
 sudo systemctl start wg-quick@wg0
 
@@ -48,7 +64,18 @@ to check if the client is up:
 ifconfig wg0
 wg show
 
+### Alternate configuration site:
+https://www.wireguard.com/quickstart/
+
+
+### Alternate ... 
+
+https://www.ckn.io/blog/2017/11/14/wireguard-vpn-typical-setup/
+
+
+
 ### CLIENT
+
 
 https://www.wireguard.com/install/
 
