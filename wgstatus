@@ -1,0 +1,10 @@
+#!/bin/bash
+
+systemctl status wg-quick@wg0
+
+echo ""
+echo ""
+echo ""
+echo "#---------------------------------#"
+ip a show wg0
+
